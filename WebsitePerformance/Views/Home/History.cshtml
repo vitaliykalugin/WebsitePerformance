@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebsitePerformance.Models.PerformanceSitemap>
+
+@{
+    ViewData["Title"] = "History";
+}
+
+<h1>History</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Uri
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.BaseUri.ToString()
+            </td>
+            <td>
+                @Html.ActionLink("UriHistory", "UriHistory", new { id = item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

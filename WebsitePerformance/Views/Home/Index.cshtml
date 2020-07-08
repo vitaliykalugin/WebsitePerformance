@@ -8,7 +8,7 @@
 <div class="form-group">
     <form asp-action="Performance" method="post">
         <label asp-for="Uri"></label>
-        <input class="form-control" style="width:500px; margin-bottom: 10px" type="text" asp-for="Uri" />
+        <input class="form-control" style="width:500px; margin-bottom: 10px" type="text" asp-for="Uri" placeholder="https://soundcloud.com/" />
         <input type="submit" class="btn btn-primary" value="Start" /><br />
         <span asp-validation-for="Uri" class="text-danger"></span>
     </form>
